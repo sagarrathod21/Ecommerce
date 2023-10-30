@@ -1,0 +1,91 @@
+.header{
+    background-color: var(--header-color);
+    &__inner{
+        max-width: 1140px;
+        margin: auto;
+        padding: 13px 15px;
+        height: 49px;
+    }
+
+    .v-line{
+        width: 1px;
+        height: 24px;
+        background-color: var(--primary-color);
+    }
+
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .header__search{
+            width: 17px;
+            height: 17px;
+            filter: invert(100%);
+            cursor: pointer;
+            transition: 0.4s all;
+            &:hover{
+                transform: scale(90%);
+            }
+        }
+        display: none;
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        justify-content: flex-end;
+
+        .header__link{
+            text-decoration: none;
+            font-size: 13px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: 0.4s all;
+            &:hover{
+                opacity: 0.75;
+            }
+        }
+
+        .header__currency{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: 0.4s all;
+            position: relative;
+            &:hover{
+                opacity: 0.75;
+            }
+
+            .arrow-icon{
+                filter: invert(100%);
+            }
+
+            .header__currency__types{
+                background-color: var(--primary-color);
+                max-width: 100px;
+                position: absolute;
+                top: 30px;
+                z-index: 10;
+                
+                .currency__type{
+                    width: 60px;
+                    height: 33px;
+                    padding: 5px 10px;
+                    color: var(--header-color);
+                    background-color: var(--primary-color);
+                    font-size: 13px;
+                    line-height: 23.4px;
+                    transition: 0.4s all;
+                    &:hover{
+                        color: var(--btn-bg-color);
+                        background-color: #f3f3f3;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+
+
+.cart{
+    &__inner{
+        max-width: 1140px;
+        margin: auto;
+        padding: 50px 15px;
+    }
+
+    &__info{
+
+        .cart__line{
+            border: none;
+            height: 0.5px;
+            background-color: #ededed;
+        }
+
+        &__one{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 11px 0 10px;
+
+            .cart__left{
+                flex: 1 1 40%;
+
+                .cart__name{
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    color: var(--desc-color);
+                }
+            }
+
+            .cart__right{
+                flex: 1 1 60%;
+                display: flex;
+                align-items: center;
+
+                .cart__type{
+                    flex: 1 1 33.333%;
+                    text-align: center;
+                    color: var(--desc-color);
+                    font-size: 14px;
+                    line-height: 25.2px;
+                }
+            }
+        }
+
+        &__two{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+
+            .cart__item-name{
+                flex: 1 1 40%;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .cart__image{
+                    max-width: 150px;
+                    max-height: 100px;
+                }
+
+                .cart__title{
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    color: var(--btn-bg-color);
+                    transition: 0.4s all;
+                    cursor: pointer;
+                    &:hover{
+                        color: #3c928a;
+                    }
+                }
+
+                .cart__price{
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    color: var(--desc-color);
+                }
+            }
+
+            .cart__name-info{
+                flex: 1 1 60%;
+                display: flex;
+                align-items: center;
+
+                .cart__type-info{
+                    flex: 1 1 33.333%;
+                    text-align: center;
+                }
+
+                .cart__quantity-btn{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+
+                    .cart__input{
+                        width: 44px;
+                        height: 24px;
+                        padding: 5px;
+                        font-size: 14px;
+                        color: var(--desc-color);
+                        text-align: center;
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+                    }
+                }
+
+                .cart__sub-price{
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    color: var(--desc-color);
+                }
+            }
+        }
+
+        &__three{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            .continue-shop-btn{
+                flex-basis: 197px;
+                height: 35px;
+                border: 1px solid var(--btn-bg-color);
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--btn-bg-color);
+                background-color: var(--primary-color);
+                cursor: pointer;
+                transition: 0.4s all;
+                &:hover{
+                    color: var(--primary-color);
+                    background-color: var(--btn-bg-color);
+                }
+            }
+
+            .checkout-btn{
+                width: 132px;
+                height: 34px;
+                background-color: var(--btn-bg-color);
+                color: var(--primary-color);
+                border: none;
+                font-size: 14px;
+                line-height: 20px;
+                transition: 0.4s all;
+                cursor: pointer;
+                &:hover{
+                    background-color: #3c928a;
+                }
+            }
+        }
+        
+    }
+}

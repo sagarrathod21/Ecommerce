@@ -1,0 +1,78 @@
+<div class="checkout">
+    <div class="checkout__inner">
+        <div class="checkout__one">
+            <div>
+                <div class="checkout__title">Shipping Address</div>
+            </div>
+            <div class="checkout__in">
+                <div class="checkout__name">
+                    <label for="firstname">First Name <span class="checkout__required">*</span></label>
+                    <input type="text" id="firstname" class="checkout__input" required>
+                </div>
+                <div class="checkout__name">
+                    <label for="lastname">Last Name <span class="checkout__required">*</span></label>
+                    <input type="text" id="lastname" class="checkout__input" required>
+                </div>
+            </div>
+            <div class="checkout__in checkout__flex">
+                <label for="email">Email <span class="checkout__required">*</span></label>
+                <input type="email" name="emial" id="email" class="checkout__input" required> 
+            </div>
+            <div class="checkout__in checkout__flex">
+                <label for="textarea">Address <span class="checkout__required">*</span></label>
+                <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea>
+            </div>
+            <div class="checkout__in">
+                <div class="checkout__name">
+                    <label for="city">City <span class="checkout__required">*</span></label>
+                    <input type="text" id="city" name="city" class="checkout__input" required>
+                </div>
+                <div class="checkout__name">
+                    <label for="select">Country <span class="checkout__required">*</span></label>
+                    <select name="select" id="select">
+                        <option value="select-country">Select Country</option>
+                        <option value="india" selected>India</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="checkout__in">
+                <div class="checkout__name">
+                    <label for="select">State / Province <span class="checkout__required">*</span></label>
+                    <select name="select" id="select">
+                        <option value="select-state">Select State / Province </option>
+                        <option value="karnataka" selected>Karnataka</option>
+                        <option value="maharashtra">Maharashtra</option>
+                        <option value="goa">Goa</option>
+                    </select>
+                </div>
+                <div class="checkout__name">
+                    <label for="code">ZIP Code <span class="checkout__required">*</span></label>
+                    <input type="text" id="code" name="code" class="checkout__input" required>
+                </div>
+            </div>
+            <div class="checkout__in checkout__flex">
+                <label for="mobile">Telephone <span class="checkout__required">*</span></label>
+                <input type="text" name="mobile" id="mobile" class="checkout__input" required> 
+            </div>
+            <div class="checkout__in checkout__btn">
+                <button type="submit" class="continue-btn">Continue</button>    
+            </div>
+        </div>
+        <p class="checkout__vr-line"></p>
+        <div class="checkout__two">
+            <div>
+                <div class="checkout__summry">Order Summary</div>
+            </div>
+            <div class="checkout__sub-total">
+                <div class="checkout__subtotal">Subtotle(1 items)</div>
+                <div class="checkout__sub-price">Rs.254</div>
+            </div>
+            <hr class="checkout__line">
+            <div class="checkout__sub-total">
+                <div class="checkout__total">Total</div>
+                <div class="checkout__total-price">Rs.254</div>
+            </div>
+        </div>
+    </div>
+</div>

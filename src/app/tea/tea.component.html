@@ -1,0 +1,75 @@
+<div class="coffee">
+    <div class="coffee__inner">
+        <div class="coffee__info">
+            <div class="coffee__info__one">
+                <div class="info__inner">
+                    <span class="coffee__title">Shop Tea</span>
+                    <p class="coffee__desc">
+                        Tea is an aromatic beverage commonly prepared by pouring hot or boiling water over cured or fresh leaves of the Camellia sinensis, an evergreen shrub native to East Asia.[3] After water, it is the most widely consumed drink in the world.
+                    </p>
+                </div>
+            </div>
+            <div class="coffee__info__two">
+                <img src="../../assets/image-2.jpg" alt="image" class="coffee__image">
+            </div>
+        </div>
+        <div class="coffee__sort">
+            <span class="coffee__sort-name">Sort by :</span>
+            <mat-form-field     appearance="outline" class="coffee__sort-select">
+                <mat-select [(value)]="currentSortOption">
+                    <mat-option value="MostPopular" (click)="sortMostPopular()">Most Popular</mat-option>
+                    <mat-option value="MostRecent" (click)="sortMostRecent()">Most Recent</mat-option>
+                    <mat-option value="DecPrice" (click)="sortDecPrice()">Price: High to Low</mat-option>
+                    <mat-option value="IncPrice" (click)="sortIncPrice()">Price: Low to High</mat-option>
+                    <mat-option value="AtoZ" (click)="sortAtoZ()">A to Z</mat-option>
+                    <mat-option value="ZtoA" (click)="sortZtoA()">Z to A</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="coffee__product">
+            <div class="product__list" *ngFor="let product of products">
+                <div class="product__list__inner">
+                    <div class="product__relative">
+                        <img src="{{product.img}}" alt="image" class="product__image">
+                        <div class="product__check" *ngIf="product.sale === true">
+                           <span class="check">Sale</span>
+                        </div>
+                        <div class="product__view">
+                            <div class="product__available" *ngIf="product.isStack === true">
+                                <div class="details">
+                                    <a class="view-details" routerLink="/view-product">View Details</a>
+                                </div>
+                                <div class="search">
+                                    <img src="../../assets/asset 12.svg" alt="search" 
+                                    class="search__image" 
+                                    width="20px" 
+                                    height="20px" 
+                                    style="filter: invert(100%); 
+                                    margin: 20px 0 5px;
+                                    cursor: pointer;"
+                                    >
+                                </div>
+                                <hr style="width: 97px;">
+                            </div>
+                            <div class="product__out-of-stack" *ngIf="product.isStack === false">
+                                <div class="out-of-stack">
+                                    <a class="view-info" routerLink="/view-product">Out of stack</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__title"><span class="title">{{product.title}}</span></div>
+                    <div class="product__price">
+                        <span class="price">Rs.{{product.disPrice}}-Rs.{{product.price}}</span>
+                    </div>
+                    <div class="product__star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

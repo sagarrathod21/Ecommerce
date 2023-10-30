@@ -1,0 +1,39 @@
+<div class="psearch">
+    <div class="psearch__inner">
+        <div class="psearch__inner__inner">
+            <div class="psearch__photo">
+                <img src="{{item.img}}" alt="image" class="psearch__image">
+            </div>
+            <div class="psearch__info">
+                    <div class="psearch__name">
+                        <span class="psearch__title">{{item.title}}</span>
+                    </div>
+                    <hr class="psearch__line">
+                    <div class="psearch__rate">
+                        <span class="psearch__price">Rs-{{item.price}}.00</span>
+                    </div>
+                    <hr class="psearch__line">
+                    <div class="psearch__select">
+                        <span class="psearch__sname">{{item.select}}</span>
+                        <div class="psearch__btn-quantity">
+                            <div *ngFor="let c of item.capacity">
+                                <button type="button" class="btn-quantity">{{c.pakage}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="psearch__line">
+                    <div class="psearch__choose">
+                        <span class="psearch__cname">Choose Quantity</span>
+                        <div class="psearch__user-in">
+                            <input type="text" minlength="1" value="{{quantity}}" class="psearch__input">
+                            <div class="psearch__value">
+                                <img src="../../assets/expand_less.png" alt="icon" class="psearch__aicon" (click)="incValue()">
+                                <img src="../../assets/expand_less.png" alt="icon" class="psearch__aicon icon--design" (click)="decValue()">
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add-cart">Add to Cart</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

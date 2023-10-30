@@ -1,0 +1,75 @@
+.sign-up{
+    &__inner{
+        max-width: 600px;
+        margin: auto;
+        padding: 50px 30px;
+
+        .sign-up__title{
+            font-size: 20px;
+            line-height: 36px;
+            color: var(--header-color);
+            margin-bottom: 8px;
+        }
+
+        .sign-up__form{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .sign-up__item{
+                display: flex;
+                flex-direction: column;
+
+                .sign-up__lable{
+                    font-size: 14px;
+                    line-height: 25.2px;
+                    color: var(--desc-color);
+                    margin-bottom: 5px;
+                }
+
+                .sign-up__input{
+                    height: 42px;
+                    padding: 10px 5px;
+                    background-color: var(--primary-color);
+                    color: var(--desc-color);
+                    font-size: 14px;
+                    border: 1.5px solid rgba(0, 0, 0, 0.2);
+                }
+
+                .required{
+                    color: red;
+                }
+            }
+
+            .sign-up__button{
+                text-align: end;
+                .sign-up-btn{
+                    padding: 8px 17px;
+                    background-color: var(--btn-bg-color);
+                    color: var(--primary-color);
+                    font-size: 14px;
+                    line-height: 20px;
+                    border: none;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #3c928a;
+                    }
+                }
+            }
+        }
+
+        .sign-up__sign-in{
+            text-align: center;
+            .sign-in{
+                font-size: 14px;
+                line-height: 25.2px;
+                color: var(--desc-color);
+            }
+
+            .sign-in__btn{
+                text-decoration: none;
+                color: var(--btn-bg-color);
+            }
+        }
+    }
+}

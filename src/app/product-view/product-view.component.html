@@ -1,0 +1,50 @@
+<div class="pview">
+    <div class="pview__inner">
+        <div class="pview__one">
+            <div class="pview__photo">
+                <img src="{{item.img}}" alt="image" class="pview__image" >
+            </div>
+            <div class="pview__info">
+                <div class="pview__info__one">
+                    <div class="pview__name">
+                        <span class="pview__title" >{{item.title}}</span>
+                    </div>
+                    <hr class="pview__line">
+                    <div class="pview__select">
+                        <span class="pview__sname">{{item.select}}</span>
+                        <div class="pview__btn-quantity">
+                            <div *ngFor="let c of item.capacity">
+                                <button type="button" class="btn-quantity">{{c.pakage}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="pview__line">
+                    <div class="pview__para">
+                        <p class="pview__desc">
+                            {{item.desc}}
+                        </p>
+                    </div>
+                </div>
+                <div class="pview__info__two">
+                    <div class="pview__rate">
+                        <span class="pview__price" >Rs - {{item.price}}.00</span>
+                    </div>
+                    <hr class="pview__line">
+                    <form [formGroup]="form" (ngSubmit)="onSubmit(item.id)">
+                        <div class="pview__choose">
+                            <span class="pview__cname">Choose Quantity</span>
+                            <div class="pview__user-in">
+                                <input type="text" minlength="1" value="{{quantity}}" class="pview__input" formControlName="quantity">
+                                <div class="pview__value">
+                                    <img src="../../assets/expand_less.png" alt="icon" class="pview__aicon" (click)="incValue()">
+                                    <img src="../../assets/expand_less.png" alt="icon" class="pview__aicon icon--design" (click)="decValue()">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

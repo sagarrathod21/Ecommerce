@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg-grad">
+                            <defs>
+                                <linearGradient id="MyGradient-1384448000000002286-4">
+                                    <stop offset="100%"/>
+                                    <stop offset="0%"/>
+                                </linearGradient>
+                            </defs>
+                          <polygon fill="url(#MyGradient-1384448000000002286-4)" points="24,9.439 14.906,9.439 12.09,0.767 9.227,9.439 0,9.439 7.473,14.694 4.668,23.233 12.035,17.874 19.438,23.182   16.633,14.654 "/>
+                        </svg>

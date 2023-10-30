@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "login": [
+    {
+      "fullName": "Sagar",
+      "email": "sagar@srr.com",
+      "password": "2525",
+      "phone": "2525252525",
+      "id": 1
+    },
+    {
+      "fullName": "Vinod ",
+      "email": "vinod@srr.com",
+      "password": "1234",
+      "phone": "3636363636",
+      "id": 2
+    },
+    {
+      "fullName": "Vinod ",
+      "email": "vin21od@srr.com",
+      "password": "1234",
+      "Phone": "3636363636",
+      "id": 3
+    },
+    {
+      "fullName": "Vinod ",
+      "email": "vino21d@srr.com",
+      "password": "1234",
+      "Phone": "3636363636",
+      "id": 4
+    }
+  ],
+  "cartList": [
+    {
+      "img": "../../assets/roast.jpg",
+      "title": "Sermon Dark Roast",
+      "price": 1250,
+      "quantity": "21",
+      "id": 1
+    },
+    {
+      "img": "../../assets/green-tea.jpg",
+      "title": "Moroccan Peppermint",
+      "price": 150,
+      "quantity": "5",
+      "id": 2
+    }
+  ],
+  "productList": [
+    {
+      "id": 1,
+      "img": "../../assets/coffee.jpg",
+      "title": "Barista Blend Sagar",
+      "price": 21,
+      "toPrice": 2100,
+      "isStack": true,
+      "sale": false,
+      "rating": 4.5,
+      "date": "new Date('2023-01-15')",
+      "desc": "Use this paragraph to describe your product. Add"
+    }
+  ]
+}

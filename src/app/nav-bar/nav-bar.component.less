@@ -1,0 +1,70 @@
+
+.nav{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 5px 0px;
+    &__inner{
+        max-width: 1140px;
+        margin: auto;
+        padding: 33px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left{
+        font-size: 24px;
+        font-family: 'Nunito', sans-serif;
+        color: var(--header-color);
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .nav__lists{
+            display: flex;
+            gap: 25px;
+
+            .lists-list{
+                padding: 8px 16px;
+                color: var(--header-color);
+                cursor: pointer;
+                &:focus{
+                    background-color: var(--btn-bg-color);
+                    border-radius: 4px;
+                    color: var(--primary-color);
+                }
+            }
+        }
+
+        .info-2{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .v-line{
+                width: 1px;
+                height: 17px;
+                background-color: var(--block-color);
+            }
+
+            .nav__search{
+                width: 17px;
+                height: 17px;
+                transition: 0.3s all;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(90%);
+                }
+            }
+
+            .nav__cart{
+                transition: 0.4s all;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(90%);
+                }
+            }
+        }
+    }
+}

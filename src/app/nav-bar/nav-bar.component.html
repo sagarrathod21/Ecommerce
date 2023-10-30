@@ -1,0 +1,26 @@
+<nav class="nav">
+    <div class="nav__inner">
+        <div class="nav__left">
+            BLACK SLATE
+        </div>
+        <div class="nav__right">
+            <div class="nav__info info-1">
+                <ul class="nav__lists">
+                    <li class="lists-list home-list" [routerLink]="['/home']">Home</li>
+                    <li class="lists-list" [routerLink]="['/coffee']">Shop Coffee</li>
+                    <li class="lists-list" [routerLink]="['/tea']">Shop Tea</li>
+                    <li class="lists-list" [routerLink]="['/contact']">Contact</li>
+                    <li class="lists-list" [routerLink]="['/term']">Term and Conditions</li>
+                </ul>
+            </div>
+            <div class="nav__info info-2">
+                <img src="../../assets/asset 7.svg" alt="search" class="nav__search">
+                <p class="v-line"></p>
+                
+                <mat-icon [matBadge]="cartItemCount" matBadgeColor="primary">
+                    <img src="../../assets/cart-24.png" alt="cart" class="nav__cart" [routerLink]="['/cart']">
+                </mat-icon>
+            </div>
+        </div>
+    </div>
+</nav>

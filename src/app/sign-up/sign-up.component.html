@@ -1,0 +1,31 @@
+<div class="sign-up">
+    <div class="sign-up__inner">
+        <div class="sign-up__title">Sign Up</div>
+        <div class="sign-up__fill">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="sign-up__form">
+                <div class="sign-up__item">
+                    <label for="name" class="sign-up__lable">Full Name <span class="required">*</span></label>
+                    <input type="text" name="name" id="name" class="sign-up__input" formControlName="fullName" required>
+                </div>
+                <div class="sign-up__item">
+                    <label for="email" class="sign-up__lable">Email <span class="required">*</span></label>
+                    <input type="email" name="email" id="email" class="sign-up__input" formControlName="email" required>
+                </div>
+                <div class="sign-up__item">
+                    <label for="password" class="sign-up__lable">Password <span class="required">*</span></label>
+                    <input type="password" name="password" id="password" class="sign-up__input" formControlName="password" required>
+                </div>
+                <div class="sign-up__item">
+                    <label for="phone" class="sign-up__lable">Phone <span class="required">*</span></label>
+                    <input type="text" name="phone" id="phone" class="sign-up__input" formControlName="Phone" required>
+                </div>
+                <div class="sign-up__button">
+                    <button type="submit" class="sign-up-btn" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <div class="sign-up__sign-in">
+                <p class="sign-in">Already have an account? <a href="../sign-in" class="sign-in__btn">Sign In</a> </p>
+            </div>
+        </div>
+    </div>
+</div>

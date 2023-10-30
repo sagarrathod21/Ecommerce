@@ -1,0 +1,26 @@
+<header class="header">
+    <div class="header__inner">
+        <div class="header__left">
+            <img src="../../assets/asset 7.svg" alt="search" class="header__search">
+            <p class="v-line"></p>
+            <img src="" alt="cart">
+        </div>
+        <div class="header__right">
+            <a class="header__link" routerLink="/sign-in">Sign In</a>
+            <p class="v-line"></p>
+            <a class="header__link" routerLink="/sign-up">Sign Up</a>
+            <p class="v-line"></p>
+            <div class="header__currency" (click)="onCurrency()">
+                <span class="currency">INR</span>
+                <img src="../../assets/arrow.png" alt="icon" class="arrow-icon">
+                <div class="header__currency__types" *ngIf="currency">
+                    <div class="currency__type">INR</div>
+                    <div class="currency__type">AED</div>
+                    <div class="currency__type">KWD</div>
+                    <div class="currency__type">SGD</div>
+                    <div class="currency__type">USD</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

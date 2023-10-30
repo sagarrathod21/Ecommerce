@@ -1,0 +1,240 @@
+<div class="main">
+    <div class="main__inner">
+        <div class="sliding__btn">
+            <img src="" alt="">
+            <img src="" alt="">
+        </div>
+        <div class="main__sliding">
+            <div class="main__item">
+                <img src="../../assets/image-1.jpg" alt="image" class="main__image">
+                  <div class="main__info">
+                    <h1 class="main__title">
+                       THE FINEST TEAS
+                    </h1>
+                    <p class="main__desc">
+                       Get enchanted by the masterful and the curious. Our team works hard to source the highest quality blends of tea leaves for you. Immerse yourself in the world of specialty teas.
+                    </p>
+                    <div><button type="button" class="main__link">SHOP TEAS</button></div>
+                </div>
+            </div>
+            <div class="main__item">
+                    <img src="../../assets/image-2.jpg" alt="image" class="main__image">
+                      <div class="main__info">
+                        <h1 class="main__title-2">
+                            LEAFING THROUGH HISTORY
+                        </h1>
+                        <p class="main__desc-2">
+                            Our tea evangelist takes you on a journey to find some of the world's most extraordinary teas. Meet Jane, the force behind the Artisan Tea Shop.
+                        </p>
+                        <div><button type="button" class="main__link-2">SHOP TEAS</button></div>
+                    </div>
+            </div>
+            <div class="main__item">
+                    <img src="../../assets/image-3.jpg" alt="image" class="main__image">
+                      <div class="main__info">
+                        <h1 class="main__title-2">
+                            ARTISAN ROASTED COFFEE
+                        </h1>
+                        <p class="main__desc-2">
+                            Begin your day with the great flavor of our specialty roasts. Our flagship blend combines sweet golden marmalade and the bright acidity of red apple.
+                        </p>
+                        <div><button type="button" class="main__link-2">SHOP TEAS</button></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="future">
+    <div class="future__inner">
+        <div class="future__header">
+            <span class="future__title">Crafting the future of coffee</span>
+            <hr class="h-line">
+        </div>
+        <div class="future__info">
+            <div class="info">
+                <img src="../../assets/asset 0.png" alt="">
+                <span class="future__name">Coffee delivered</span>
+                <p class="future__desc">On your schedule. On time, every time.</p>
+            </div>
+            <div class="info">
+                <img src="../../assets/asset 1.png" alt="">
+                <span class="future__name">Craft coffe</span>
+                <p class="future__desc">Special flavor in every brew</p>
+            </div>
+            <div class="info">
+                <img src="../../assets/asset 2.png" alt="">
+                <span class="future__name">Award-winning</span>
+                <p class="future__desc">Coffee bean masters and roasters</p>
+            </div>
+        </div>
+        <div class="future__btn">
+            <button type="button" class="btn-subscribe">START A SUBSCRIPTION</button>
+        </div>
+    </div>
+</div>
+
+<div class="product">
+    <div class="product__inner">
+        <span class="product__heading">All Products</span>
+        <div class="coffee__product">
+            <div class="product__list" *ngFor="let product of products; let i = index">
+                <div class="product__list__inner">
+                    <div class="product__relative">
+                        <img src="{{product.img}}" alt="image" class="product__image">
+                        <div class="product__check" *ngIf="product.sale === true">
+                           <span class="check">Sale</span>
+                        </div>
+                        <div class="product__view">
+
+                            <div class="product__available" *ngIf="product.isStack === true">
+                                <div class="details">
+                                    <a class="view-details" [routerLink]="['/view-product', i]">View Details</a>
+                                </div>
+                                <div class="search">
+                                    <img src="../../assets/asset 12.svg" alt="search" 
+                                    [routerLink]="['/search', i]"
+                                    class="search__image" 
+                                    width="20px" 
+                                    height="20px" 
+                                    style="filter: invert(100%); 
+                                    margin: 20px 0 5px;
+                                    cursor: pointer;"
+                                    >
+                                </div>
+                                <hr style="width: 97px;">
+                            </div>
+                            <div class="product__out-of-stack" *ngIf="product.isStack === false">
+                                <div class="out-of-stack">
+                                    <a class="view-info" [routerLink]="['/view-product', i]">Out of stack</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__title"><span class="title">{{product.title}}</span></div>
+                    <div class="product__price">
+                        <span class="price">Rs.{{product.disPrice}}-Rs.{{product.price}}</span>
+                    </div>
+                    <div class="product__star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="integrity">
+    <div class="integrity__inner">
+        <div class="integrity__learn">
+            <span class="integrity__title">COFFEE WITH INTEGRITY</span>
+            <p class="integrity__desc">
+                We are committed to sourcing each bean sustainably keeping the health of our planet and our farmers in mind. Our Artisan Roasted Coffee is made in small batches and handcrafted to maintain the quality, aroma, and character of each bean.
+            </p>
+            <span class="integrity__cetified">We are RAINFOREST ALLIANCE and FAIR TRADE certified.</span>
+            <div>
+                <button type="button" class="btn-learn">LEARN MORE</button>
+            </div>
+        </div>
+        <div class="integrity__types">
+            <div class="integrity__card">
+                <div class="integrity__image"><img src="../../assets/asset 4.png" alt="icon"></div>
+                <div class="integrity__type-info">
+                    <span class="integrity__type-name">Craft Coffee</span>
+                    <p class="integrity__type-desc">
+                       We source the world's finest coffee. We honor our commitment to you with a team dedicated to their craft.
+                    </p>
+                </div>
+            </div>
+            <div class="integrity__card">
+                <div class="integrity__image"><img src="../../assets/asset 5.png" alt="icon"></div>
+                <div class="integrity__type-info">
+                    <span class="integrity__type-name">Fine Tea</span>
+                    <p class="integrity__type-desc">
+                       Our tea leaves are sourced from the best farms worked by the best artisans.
+                    </p>
+                </div>
+            </div>
+            <div class="integrity__card">
+                <div class="integrity__image"><img src="../../assets/asset 6.png" alt="icon"></div>
+                <div class="integrity__type-info">
+                    <span class="integrity__type-name">Brew at Home</span>
+                    <p class="integrity__type-desc">
+                       Learn the craft of coffee brewing and extract optimum flavors from the comfort of your home.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="seller">
+    <div class="seller__inner">
+        <span class="seller__heading">Best Sellers</span>
+        <div class="coffee__product">
+            <div class="product__list" *ngFor="let product of seller">
+                <div class="product__list__inner">
+                    <div class="product__relative">
+                        <img src="{{product.img}}" alt="image" class="product__image">
+                        <div class="product__check" *ngIf="product.sale === true">
+                           <span class="check">Sale</span>
+                        </div>
+                        <div class="product__view">
+                            <div class="product__available" *ngIf="product.isStack === true">
+                                <div class="details">
+                                    <a class="view-details" routerLink="/view-product">View Details</a>
+                                </div>
+                                <div class="search">
+                                    <img src="../../assets/asset 12.svg" alt="search" 
+                                    class="search__image" 
+                                    width="20px" 
+                                    height="20px" 
+                                    style="filter: invert(100%); 
+                                    margin: 20px 0 5px;
+                                    cursor: pointer;"
+                                    >
+                                </div>
+                                <hr style="width: 97px;">
+                            </div>
+                            <div class="product__out-of-stack" *ngIf="product.isStack === false">
+                                <div class="out-of-stack">
+                                    <a class="view-info" routerLink="/view-product">Out of stack</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__title"><span class="title">{{product.title}}</span></div>
+                    <div class="product__price">
+                        <span class="price">Rs.{{product.disPrice}}-Rs.{{product.price}}</span>
+                    </div>
+                    <div class="product__star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">
+                        <img src="../../assets/asset 13.svg" alt="icon" class="star">   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="subscribe">
+    <div class="subscribe__inner">
+        <span class="subscribe__heading">GET UPDATES AND DEALS FROM ARTISAN ROASTERS</span>
+        <p class="subscribe__desc">
+            Submit your email and receive special offers, brewing tips, new blend announcements, and $4.99 off your first order!
+        </p>
+        <div class="subscribe__input">
+            <form>
+                <input type="email" name="email" id="email" placeholder="Email" class="subscribe__email" required>
+                <button type="button" class="subscribe__btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</div>
